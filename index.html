@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech For Girls Registration</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+  <div class="form-section max-w-lg w-full">
+    <h1 class="title">
+      <span class="animate-bounce-slow">🚀</span> Tech For Girls Registration
+    </h1>
+    <p class="subtitle">Join our community and start your journey in tech!</p>
+
+    <form id="registrationForm" class="space-y-7">
+      <!-- Basic Details -->
+      <div class="form-card purple">
+        <h2 class="form-title text-purple-700">Basic Details</h2>
+        <div class="space-y-4">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" name="phone" required />
+          </div>
+          <div>
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="college">College/Department</label>
+            <input type="text" id="college" name="college" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp Sharing -->
+      <div class="form-card green text-center">
+        <h2 class="form-title text-green-700">Spread the Word! 📢</h2>
+        <button type="button" id="whatsappShareBtn">📲 Share on WhatsApp</button>
+        <p id="whatsappCounter">Click count: 0/5</p>
+        <p id="whatsappMessage" class="hidden">✅ Sharing complete! Please continue.</p>
+      </div>
+
+      <!-- File Upload -->
+      <div class="form-card blue">
+        <h2 class="form-title text-blue-700">Upload Screenshot 🖼️</h2>
+        <label for="screenshot">Upload your resume, photo, or other relevant document.</label>
+        <input type="file" id="screenshot" name="screenshot" accept="image/*, .pdf" />
+        <p id="screenshotFileName"></p>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submitBtn">🚀 Submit Registration</button>
+
+      <!-- Success / Error Messages -->
+      <div id="submissionMessage" class="form-success hidden">
+        🎉 Your submission has been recorded. Thanks for being part of Tech for Girls!
+      </div>
+      <div id="errorMessage" class="form-error hidden">
+        ⚠️ Please complete the WhatsApp sharing (5/5 clicks) before submitting.
+      </div>
+    </form>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
